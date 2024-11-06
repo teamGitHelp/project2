@@ -15,23 +15,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 20
-
+          node-version: 18
+      
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build SvelteKit app
         run: npm run build
+      
+      - name: Run Tests
+        run: npm run test  
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v2
         with:
-          path: "build/"
+          path: 'build/'
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2
