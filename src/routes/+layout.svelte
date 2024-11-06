@@ -4,6 +4,7 @@
 	import { fly } from 'svelte/transition';
 	import { cubicOut } from 'svelte/easing';
 	import { writable } from 'svelte/store';
+	import { base } from '$app/paths';
 	
 	let { children } = $props();
 	const isMenuOpen = writable(false);
@@ -23,9 +24,9 @@
 	  
 	  <!-- Desktop Menu -->
 	  <div class="hidden md:flex items-center gap-12">
-	    <a href="/" class="text-[#1a1a43] hover:text-gray-600 transition-colors">Home</a>
-	    <a href="/request-page" class="text-gray-500 hover:text-[#1a1a43] transition-colors">Request</a>
-	    <a href="/contact-page" class="text-gray-500 hover:text-[#1a1a43] transition-colors">Contact</a>
+	    <a href="/project2" class="text-[#1a1a43] hover:text-gray-600 transition-colors">Home</a>
+	    <a href="{base}/request-page" class="text-gray-500 hover:text-[#1a1a43] transition-colors">Request</a>
+	    <a href="{base}/contact-page" class="text-gray-500 hover:text-[#1a1a43] transition-colors">Contact</a>
 	  </div>
 	  
 	  <!-- Mobile Menu Button -->
@@ -55,21 +56,21 @@
 	  >
 	    <div class="flex flex-col items-center justify-center h-full space-y-8">
 		 <a 
-		   href="/" 
+		   href="/project2" 
 		   class="text-2xl text-[#1a1a43]" 
 		   onclick={toggleMenu}
 		 >
 		   Home
 		 </a>
 		 <a 
-		   href="/request" 
+		   href="{base}/request-page" 
 		   class="text-2xl text-[#1a1a43]" 
 		   onclick={toggleMenu}
 		 >
 		   Request
 		 </a>
 		 <a 
-		   href="/contact" 
+		   href="{base}/contact-page" 
 		   class="text-2xl text-[#1a1a43]" 
 		   onclick={toggleMenu}
 		 >
