@@ -1,5 +1,6 @@
 <script>
      import { goto } from '$app/navigation';
+     import { base } from '$app/paths';
    </script>
    
    <div class="min-h-screen bg-white">
