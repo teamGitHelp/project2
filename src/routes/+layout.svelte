@@ -18,15 +18,15 @@
 	<nav class="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
 	  <!-- Logo -->
 	  <div class="flex items-center gap-2">
-	    <div class="w-4 h-8 bg-[#ffd4d4] rounded-full"></div>
-	    <span class="text-[#1a1a43] font-medium">Lifeline</span>
+	    <div class="w-4 h-8 bg-[#E7C2D4] rounded-full"></div>
+	    <span class="text-[#252861] font-medium">Lifeline</span>
 	  </div>
 	  
 	  <!-- Desktop Menu -->
 	  <div class="hidden md:flex items-center gap-12">
-	    <a href="/project2" class="text-[#1a1a43] hover:text-gray-600 transition-colors">Home</a>
-	    <a href="{base}/request-page" class="text-gray-500 hover:text-[#1a1a43] transition-colors">Request</a>
-	    <a href="{base}/contact-page" class="text-gray-500 hover:text-[#1a1a43] transition-colors">Contact</a>
+	    <a href="/project2" class="text-[#686868] hover:text-[#252861] transition-colors">Home</a>
+	    <a href="{base}/request-page" class="text-[#686868] hover:text-[#252861] transition-colors">Request</a>
+	    <a href="{base}/contact-page" class="text-[#686868] hover:text-[#252861] transition-colors">Contact</a>
 	  </div>
 	  
 	  <!-- Mobile Menu Button -->
@@ -80,4 +80,12 @@
 	  </div>
 	{/if}
 	{@render children()}
+
+	<footer class="mt-12 py-6 text-center text-gray-500 text-sm">
+		<div class="flex items-center justify-center gap-2 mb-2">
+		  <div class="w-3 h-6 bg-[#E7C2D4] rounded-full"></div>
+		  <span class="text-[#252861]">Lifeline</span>
+		</div>
+		<p class="text-[#686868]">Copyright © 2024 GIHelp Emergency Hotline</p>
+	</footer>
    </div>
