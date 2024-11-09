@@ -1,10 +1,16 @@
 <script lang="ts">
 	import '../app.css';
-	import { Menu, X } from 'lucide-svelte';
-	import { fly } from 'svelte/transition';
-	import { cubicOut } from 'svelte/easing';
+	// import { Menu, X } from 'lucide-svelte';
+	// import { fly } from 'svelte/transition';
+	// import { cubicOut } from 'svelte/easing';
 	import { writable } from 'svelte/store';
-	import { base } from '$app/paths';
+	// import { base } from '$app/paths';
+	import Header from '$lib/components/header.svelte';
+	import Hero from '$lib/components/hero.svelte';
+	import Barangay from '$lib/components/barangay.svelte';
+	import Station from '$lib/components/station.svelte';
+	import Footer from '$lib/components/footer.svelte';
+	import Other from '$lib/components/other.svelte';
 	
 	let { children } = $props();
 	const isMenuOpen = writable(false);
@@ -12,24 +18,37 @@
 	function toggleMenu() {
 	  isMenuOpen.update(value => !value);
 	}
-   </script>
+</script>
+
+<Header />
+<Hero />
+<div class="flex text-center justify-center mt-20">
+    <p class="text-sm font-semibold font-dmSans text-darkblue">We're here to help, 24/7. </p>
+</div>
+
+<div class="flex gap-5 justify-center">
+	<Barangay />
+	<Station />
+	<Other />
+</div>
+<Footer />
    
-   <div class="min-h-screen bg-white">
+   <!-- <div class="min-h-screen bg-white">
 	<nav class="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
-	  <!-- Logo -->
+	  <-- Logo 
 	  <div class="flex items-center gap-2">
 	    <div class="w-4 h-8 bg-[#E7C2D4] rounded-full"></div>
 	    <span class="text-[#252861] font-medium">Lifeline</span>
-	  </div>
+	  </div> -->
 	  
-	  <!-- Desktop Menu -->
+	  <!-- Desktop Menu --
 	  <div class="hidden md:flex items-center gap-12">
 	    <a href="/project2" class="text-[#686868] hover:text-[#252861] transition-colors">Home</a>
 	    <a href="{base}/request-page" class="text-[#686868] hover:text-[#252861] transition-colors">Request</a>
 	    <a href="{base}/contact-page" class="text-[#686868] hover:text-[#252861] transition-colors">Contact</a>
 	  </div>
 	  
-	  <!-- Mobile Menu Button -->
+	  <-- Mobile Menu Button -
 	  <button class="md:hidden text-[#1a1a43]" onclick={toggleMenu}>
 	    {#if $isMenuOpen}
 		 <X size={24} />
@@ -38,7 +57,7 @@
 	    {/if}
 	  </button>
 	  
-	  <!-- Location -->
+	  <!-- Location --
 	  <div class="hidden md:flex items-center gap-2">
 	    <svg class="w-5 h-5 text-[#1a1a43] rotate-45" viewBox="0 0 24 24" fill="none" stroke="currentColor">
 		 <path d="M22 2L11 13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -48,7 +67,7 @@
 	  </div>
 	</nav>
    
-	<!-- Mobile Menu -->
+	<-- Mobile Menu -
 	{#if $isMenuOpen}
 	  <div
 	    class="md:hidden fixed inset-0 z-50 bg-white"
@@ -88,4 +107,4 @@
 		</div>
 		<p class="text-[#686868]">Copyright © 2024 GIHelp Emergency Hotline</p>
 	</footer>
-   </div>
+   </div> -->
