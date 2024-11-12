@@ -13,12 +13,10 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ["Figtree", ...defaultTheme.fontFamily.sans],
 				dmSans: ['DM Sans', 'sans-serif'], 
         		inter: ['Inter', 'serif'],
 			},
 			colors: {
-				primary: colors.blue,
 				pink: '#E7C2D4',
 				darkblue: '#252861',
 				muted: '#686868',
@@ -31,7 +29,6 @@ export default {
 
 				blue: '#92BDF6',
 				lightblue: 'rgba(146, 189, 246, 0.2)',
-
 				lightpink: 'rgba(231, 194, 212, 0.3)'
 			},
 		},

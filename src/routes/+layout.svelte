@@ -13,10 +13,10 @@
 	}
  </script>
  
- <div class="min-h-screen flex flex-col">
+ <div class="min-h-screen flex flex-col gap-10">
 	<Header />
 	
-	<main class="flex-grow">
+	<main class="">
 	    {#if $page.url.pathname === '/'}
 		   {@render children()}
 	    {:else}
