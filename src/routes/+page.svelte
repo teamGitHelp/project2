@@ -10,7 +10,7 @@
      <p class="text-sm font-semibold font-dmSans text-darkblue">We're here to help, 24/7. </p>
  </div>
  
- <div class="flex gap-5 justify-center">
+ <div class="flex gap-5 justify-center mt-14">
      <Barangay />
      <Station />
      <Other />
